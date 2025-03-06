@@ -1,7 +1,7 @@
 # Compy_UI_Design_Sample
 
 ## Description
-This project is a web-based platform featuring an interactive interface with various sections, including a navigation menu, FAQs, statistics, and a footer. The design ensures easy navigation and user engagement.
+This project is a web-based platform UI Design.
 
 
 ## File Structure
