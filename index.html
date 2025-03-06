@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dpd</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .rec {
+            border-radius: 0px 0px 100px 100px;
+            background: linear-gradient(95deg, #8DB3E5 0.32%, #3D70E0 99.66%);
+            height: 433px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 228px;
+            height: 76px;
+            flex-shrink: 0;
+            aspect-ratio: 3/1;
+            
+        }
+
+        .title {
+            color: #FFF;
+            font-family: "Open Sans",;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 9.6px;
+            text-align: center;
+            font-style: normal;
+        }
+        .small-rec {
+            width: 200px;  
+            height: 5px;    
+            background: #ffffff; 
+            position: absolute;
+            bottom: 175px;  
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav {
+            position: absolute;
+            top: 40px;
+            right: 50px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav button {
+            background: transparent;
+            color: #FFF;
+            font-family: Mulish;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border: 0px solid #FFF;
+        }
+        
+        
+        .blue-rec {
+            background: #8DB3E5;
+            height: 85px;
+            width: 1169px;
+            display: flex;
+            align-items: center;
+            position:relative;
+            left: 50%;
+            margin-top: 60px;
+            transform: translate(-50%, -50%);            
+            
+
+        }       
+        .topicone {
+                      
+            
+            color: #000000;
+            font-family: Mulish;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 90px; /* 281.25% */
+            letter-spacing: 3.2px;
+            margin-left: 20px;
+        }
+        .arrow2 {
+            position: absolute;
+            right: 20px;
+            width: 49px;
+            height: 49px;
+        }
+        .paracontent {  
+            display: flex;
+            align-items: center;
+            position:relative;
+            left: 50%;
+            margin-top: 60px;
+            transform: translate(-50%, -50%);        
+            
+            width: 1096px;
+            height: 108px;
+        }
+        .para1 {
+            color: #000000;
+            font-family: Mulish;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            padding-bottom: 10px;
+        }
+        .longrec {
+            width: 1196px;
+            height: 1px;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -20px;
+            margin-bottom: 60px;
+        }
+        .white-rec {
+            background: #ffffff;
+            height: 85px;
+            width: 1169px;
+            display: flex;
+            align-items: center;
+            position:relative;
+            left: 50%;
+            margin-top: 60px;
+            transform: translate(-50%, -50%); 
+            color: #000000;           
+        }   
+        .topictwo {
+            color: #000000;
+            font-family: Mulish;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px; /* 281.25% */
+            letter-spacing: 3.2px;
+            margin-left: 20px;
+            padding-bottom: -10px;
+        }                           
+                  
+
+        .arrow1 {
+            position: absolute;
+            right: 20px;
+            width: 49px;
+            height: 49px;
+        }
+        .follows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px; /* Adjust spacing between items */
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: 2%;
+}
+
+.follow-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.iconimage {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Number {
+    color: #333;
+    font-family: Mulish;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-left: 60px;
+    margin-top: 0px;
+}
+
+.text {
+    color: #333;
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0px;
+   margin-left: 0px;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px; 
+    height: 497px; 
+    align-items: stretch;
+    margin: 10px 10px 60px 15px;
+
+    
+}
+
+.sizeone {
+    width: 850px;
+    height: 497px;
+    flex-shrink: 0;
+}
+
+.sizetwo, .sizethree {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sizetwo img {
+    width: 460px;
+    height: 240px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.sizethree img {
+    width: 310px; 
+    height: 155px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.backone {
+    width: 80%;
+    height: 620px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.4);   
+
+}
+.back-rec{
+    width: 817px;
+    height: 620px;
+    background: var(--New, linear-gradient(95deg, #8DB3E5 0.32%, #8DB3E5 99.66%));
+    position:relative;
+    float: right;
+    margin-top: -623px;
+
+    
+    
+}
+.recborder {
+    width: 700px;
+    height: 346px;
+    position:relative;
+    border-radius: 5px;
+    border: 5px solid #A7CCFF;
+    margin-top: -468px;
+    margin-left: 144px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+}
+.rectopic {
+    color: #FFF;
+    font-family: Mulish;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    top: 0;
+    left: 15px;
+    position: absolute;
+    white-space: pre-line;
+    display: block;
+    text-align: left;
+    
+}
+.rectext {
+    color: #FFF;
+    font-family: Mulish;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 600px;
+    height: 102px;
+    flex-shrink: 0;
+    top: 12;
+    left: 15px;
+    position: absolute;
+    display: flex;
+    text-align: left;
+}
+.recbutton {
+    color: #A7CCFF;
+    font-family: Mulish;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    
+}
+.recline {
+    width: 70px;
+    height: 3px;
+    flex-shrink: 0;
+    background: #A7CCFF;
+    position: absolute;
+    bottom: 65px;
+    left: 20px;
+
+}
+.stopic {
+    color: #FFF;
+font-family: Mulish;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.stext {
+    color: #FFF;
+font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+width: 387px;
+height: 47px;
+flex-shrink: 0;
+margin-top: -2px;
+}
+.boxtop {
+    left: 200px;
+    top: 30px;  
+    width: 500px;
+    height: 70px;
+    background: #8DB3E5;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+
+ 
+}
+.shapebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 110px;
+    position: absolute;
+    top: 270px;  
+    left: 20%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 18px;
+}
+.shapeline {
+    width: 1px;
+    height: 650px;
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+.teamtitle {
+    color: #333;
+font-family: Mulish;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 3.2px;
+text-transform: uppercase;
+margin-left: 100px;
+margin-top: 150px;   
+}
+.tt{
+    color: #333;
+font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-left: 20px;
+}
+
+.tp{
+    color: #333;
+font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-left: 20px;
+
+}
+.team {
+    margin-left: 100px;
+    display: flex;
+    gap: 40px;
+}
+.footerrec {
+    height: 496.015px;
+    background: var(--New, linear-gradient(95deg, #8DB3E5 0.32%, #3D70E0 99.66%));
+}
+.footerlogo {
+    
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.footertext {
+    color: #FFF;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+margin-top: 30px;
+margin-left: 50px;
+width: 336px;
+height: 120px;
+flex-shrink: 0;
+}
+.threebox {
+    display: flex;
+    gap: 200px;
+    margin-top: -300px;
+    margin-left: 650px;
+    position: relative;
+    
+
+}
+
+
+.boxtopic {
+    color: #FFF;
+font-family: Montserrat;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2.4px;
+}
+.boxtext {
+    color: #FFF;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 228.571% */
+}
+.iconboxone {
+    display: flex;
+    flex-direction: column; 
+    gap: 33px; 
+    margin-top: -250px;
+    position: relative;
+    left: -30px;
+}
+
+.iconboxone img {
+    width: 18px;
+    height: 19px;
+}
+.iconboxtwo {
+    display: flex;
+    flex-direction: column; 
+    gap: 33px; 
+    margin-top: -200px;
+    position: relative;
+    left: -30px;
+}
+
+.iconboxtwo img {
+    width: 18px;
+    height: 19px;
+}
+
+.iconboxThree {
+    display: flex;
+    flex-direction: column; 
+    gap: 33px; 
+    margin-top: -235px;
+    position: relative;
+    left: -30px;
+}
+
+.iconboxThree img {
+    width: 20px;
+    height: 20px;
+}
+.footer {
+    display: flex;
+    flex-direction: row;    
+    gap: 80px; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footertxt {
+    color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.copyright {
+    color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 20px;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="rec">
+        <img src="Image/logo.png" alt="Logo" class="logo">
+        <h1 class="title">Test Part</h1>
+        <div class="small-rec"></div>
+        <div class="nav">
+            <button>Home</button>
+            <button>About Us</button>
+            <button>Blog</button>
+            <button>Other Pages</button>
+            <button>Contact Us</button>
+        </div>
+    </div>
+    <div>
+        <div class="blue-rec">
+            <h1 class="topicone">How much time does the development take?</h1>
+            <img src="Image/arrows 2.svg" alt="" class="arrow2">
+
+        </div>
+        <div class="paracontent">
+            <p class="para1"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing </p>
+        </div>
+        <div class="longrec">
+        </div>
+        <div class="white-rec">
+            <h1 class="topictwo">What technologies do you use?</h1>
+            <img src="Image/arrows 1.svg" alt="" class="arrow2">
+
+        </div>
+        <div class="longrec">
+        </div>
+        <div class="white-rec">
+            <h1 class="topictwo">What is the cost of your services?</h1>
+            <img src="Image/arrows 1.svg" alt="" class="arrow2">
+
+        </div>
+        <div class="longrec">
+        </div>
+        <div class="white-rec">
+            <h1 class="topictwo">What about the payment process?</h1>
+            <img src="Image/arrows 1.svg" alt="" class="arrow2">
+                      
+            </div>
+        <div class="longrec">
+
+            
+    </div>
+    <div class="follows">
+        <div class="follow-box">
+            <img src="Image/coffee-cup-svgrepo-com 1.svg" alt="" class="iconimage">
+            <h3 class="Number">150+</h3>
+            <h4 class="text">Cups of Coffee</h4>
+        </div>
+        <div class="follow-box">
+            <img src="Image/project-management-timeline-icon 1.svg" alt="" class="iconimage">
+            <h3 class="Number">200+</h3>
+            <h4 class="text">Projects Finished</h4>
+        </div>
+        <div class="follow-box">
+            <img src="Image/world-svgrepo-com 1.svg" alt="" class="iconimage">
+            <h3 class="Number">100+</h3>
+            <h4 class="text">Worldwide Projects</h4>
+        </div>
+
+    </div>
+
+    <div class="gallery">
+        <div >
+            <img class="sizeone" src="Image/1.png" alt="">
+        </div>
+
+        <div class="sizetwo">
+            <img class="sizetwo img " src="Image/2.png" alt="">
+        
+            <img class="sizetwo img " src="Image/3.png" alt="">
+        </div>
+
+        <div class="sizethree">
+            <img class="sizethree img" src="Image/4.png" alt="">
+        
+            <img class="sizethree img" src="Image/5.png" alt="">
+        
+            <img class="sizethree img" src="Image/6.png" alt="">
+        </div>
+
+    </div>
+
+    <div >
+        <img class="backone" src="Image/bacground.png" alt="">
+        <div class="back-rec"> 
+            <div class="boxtop">
+                <div></div>
+                <h1 class="stopic">Brainstorming</h1>
+                <h2 class="stext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+            </div>
+            <div class="boxtop">
+                <div></div>
+                <h1 class="stopic">Project Sketching</h1>
+                <h2 class="stext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+            </div>
+            <div class="boxtop">
+                <div></div>
+                <h1 class="stopic">Design & Development</h1>
+                <h2 class="stext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+            </div>
+            <div class="boxtop">
+                <div></div>
+                <h1 class="stopic">Project Delivered</h1>
+                <h2 class="stext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+            </div>
+
+            <div class="shapebox">
+            
+                <img class="shape" src="Image/Ellipse 47.svg" alt="">
+
+                <img class="shape" src="Image/Ellipse 47.svg" alt="">
+
+                <img class="shape" src="Image/Ellipse 47.svg" alt="">
+
+                <img class="shape" src="Image/Ellipse 47.svg" alt="">
+
+        </div>
+        <div class="shapeline"></div>
+
+        </div>
+        <div class="recborder">
+            <h1 class="rectopic">How Projects Done! <br> The Process</h1>
+            <p class="rectext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="recbutton">Get In Touch </div>
+            <div class="recline"></div>
+
+        </div>
+        
+
+    </div>
+
+    <div>
+        <h1 class="teamtitle">
+            | A team you can trust.
+        </h1>
+        <div class="team">
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+            
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+        </div>
+        <div class="team">
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+            
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+            <div>
+                <img src="Image/Group 10.png" alt="">
+            <h1 class="tt">CO-FOUNDER & PARTNER</h1>
+            <h2 class="tp">MICAH LISONBEE</h2>
+            </div>
+
+        </div>
+        
+    </div>
+
+</div>
+
+
+<div class="footerrec" >
+    <img src="Image/logo.png" alt="Logo" class="footerlogo">
+    <p class="footertext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+
+    <div class="threebox">
+        <div  class="boxOne">
+            <h1 class="boxtopic"> Quick Links</h1>
+            <div>
+                <p class="boxtext">Home</p>
+                <p class="boxtext">About Us</p>
+                <p class="boxtext">Our Services</p>
+                <p class="boxtext">Our Team</p>
+                <p class="boxtext">Researchers</p>
+            </div>
+            <div class="iconboxone">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+            </div>
+
+        </div>
+        <div  class="boxtwo">
+            <h1 class="boxtopic"> Services</h1>
+            <div>
+                <p class="boxtext">Services 1</p>
+                <p class="boxtext">Services 2</p>
+                <p class="boxtext">Services 3</p>
+                <p class="boxtext">Services 4</p>
+                
+            </div>
+            <div class="iconboxtwo">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                <img src="Image/sym 16.svg" alt="">
+                
+            </div>
+
+
+            
+    </div>
+    <div  class="boxThree">
+        <h1 class="boxtopic">Contact Us</h1>
+        <div>
+            <p class="boxtext">011 200 00 00</p>
+            <p class="boxtext">011 400 00 00</p>
+            <p class="boxtext">info@childcare.lk</p>
+            <p class="boxtext">149/A Castle Street, 08 · <br>Colombo</p>
+            
+        </div >
+        <div class="iconboxThree">
+            <img src="Image/phone.svg" alt="">
+            <img src="Image/phone.svg" alt="">
+            <img src="Image/msg.png" alt="">
+            <img src="Image/location.png" alt="">
+            
+        </div>
+        
+
+
+
+</div>
+
+</div>
+<hr>
+
+<div >
+    <div class="footer">
+        
+        <h1 class="footertxt">Terms & Conditions</h1>
+        <h1 class="footertxt">Privacy Policy</h1>
+        <h1 class="footertxt">Cookie Policy</h1>
+        <h1 class="footertxt">FAQ</h1>
+
+
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright © 2025 By dpd All Rights Reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+   
+
+
+
+</body>
+</html>
